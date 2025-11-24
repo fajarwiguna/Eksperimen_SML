@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 def main():
-    df = pd.read_csv("../breast_raw/breast_cancer.csv")
+    df = pd.read_csv("../breast_raw/data.csv")
     df = df.drop(['id', 'Unnamed: 32'], axis=1, errors='ignore')
     df['diagnosis'] = df['diagnosis'].map({'M': 1, 'B': 0})
     
